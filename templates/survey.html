@@ -1,0 +1,241 @@
+{% extends "layout.html" %}{% block title %}
+Climate Survey
+{% endblock %}
+
+
+{% block main %}
+    <h2><span class="head">Climate Change Survey</span></h2>
+{% endblock %}
+
+{% block survey %}
+
+        <form action="/survey" method="post">
+            <h3 align="center"><u>Demographic</u></h3><br>
+
+            <!-- Gender questions -->
+            <fieldset class="form-group offset-xl-4 offset-lg-2">
+
+                <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0"><strong>What gender to you identify with?</strong></legend>
+                <div class="col-sm-10">
+                    {% for dict_item in gender %}
+                        {% for key, value in dict_item.items()%}
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gender" id={{value}} value='{{value}}'>
+                            <label class="form-check-label" for={{value}}>
+                                {{value}}
+                            </label>
+                        </div>
+
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </fieldset><br>
+
+            <!-- Age questions -->
+            <fieldset class="form-group offset-xl-4 offset-lg-2">
+
+                <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0"><strong>What is your age group?</strong></legend>
+                <div class="col-sm-10">
+                    {% for dict_item in age %}
+                        {% for key, value in dict_item.items()%}
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="age" id={{value}} value='{{value}}'>
+                            <label class="form-check-label" for={{value}}>
+                                {{value}}
+                            </label>
+                        </div>
+
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </fieldset><br>
+
+            <!-- Education questions -->
+            <fieldset class="form-group offset-xl-4 offset-lg-2">
+
+                <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0"><strong>What is your highest educational achievement?</strong></legend>
+                <div class="col-sm-10">
+                    {% for dict_item in education %}
+                        {% for key, value in dict_item.items()%}
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="education" id={{value}} value='{{value}}'>
+                            <label class="form-check-label" for={{value}}>
+                                {{value}}
+                            </label>
+                        </div>
+
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </fieldset><br>
+            <h3 align="center"><u>Climate Change</u></h3><br>
+            <!--Knowledge rating questions -->
+            <fieldset class="form-group offset-xl-4 offset-lg-2">
+
+                <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0"><strong>How would you rate your Climate Change knowledge?</strong></legend>
+                <div class="col-sm-10">
+                    {% for dict_item in climate_k_rating %}
+                        {% for key, value in dict_item.items()%}
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="knowledge" id={{value}} value='{{value}}'>
+                            <label class="form-check-label" for={{value}}>
+                                {{value}}
+                            </label>
+                        </div>
+
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </fieldset><br>
+
+            <!--information sources questions -->
+            <fieldset class="form-group offset-xl-4 offset-lg-2">
+
+                <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0"><strong>What is the primary source of your climate change information?</strong></legend>
+                <div class="col-sm-10">
+                    {% for dict_item in climate_info_source %}
+                        {% for key, value in dict_item.items()%}
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sources" id={{value}} value='{{value}}'>
+                            <label class="form-check-label" for={{value}}>
+                                {{value}}
+                            </label>
+                        </div>
+
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </fieldset><br>
+
+
+            <!--Climate Causes questions -->
+            <fieldset class="form-group offset-xl-4 offset-lg-2">
+
+                <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0"><strong>Which of these statements do you most agree with?</strong></legend>
+                <div class="col-sm-10">
+                    {% for dict_item in climate_causes %}
+                        {% for key, value in dict_item.items()%}
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="causes" id={{value}} value='{{value}}'>
+                            <label class="form-check-label" for={{value}}>
+                                {{value}}
+                            </label>
+                        </div>
+
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </fieldset><br>
+
+            <!--Climate Anxiety questions -->
+            <fieldset class="form-group offset-xl-4 offset-lg-2">
+
+                <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0"><strong>How worried are you about climate change?</strong></legend>
+                <div class="col-sm-10">
+                    {% for dict_item in anxiety %}
+                        {% for key, value in dict_item.items()%}
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="anxiety" id={{value}} value='{{value}}'>
+                            <label class="form-check-label" for={{value}}>
+                                {{value}}
+                            </label>
+                        </div>
+
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </fieldset><br>
+
+
+            <!--Personal action questions -->
+            <fieldset class="form-group offset-xl-4 offset-lg-2">
+
+                <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0"><strong>How would you rate your input in climate debate in your community?</strong></legend>
+                <div class="col-sm-10">
+                    {% for dict_item in personal %}
+                        {% for key, value in dict_item.items()%}
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="personal" id={{value}} value='{{value}}'>
+                            <label class="form-check-label" for={{value}}>
+                                {{value}}
+                            </label>
+                        </div>
+
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </fieldset><br>
+
+            <!--Government action questions -->
+            <fieldset class="form-group offset-xl-4 offset-lg-2">
+
+                <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0"><strong>How would you rate your elected officials action on climate change?</strong></legend>
+                <div class="col-sm-10">
+                    {% for dict_item in government_action %}
+                        {% for key, value in dict_item.items()%}
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="government" id={{value}} value='{{value}}'>
+                            <label class="form-check-label" for={{value}}>
+                                {{value}}
+                            </label>
+                        </div>
+
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </fieldset><br>
+
+            <h3 align="center"><u>Politics and Location</u></h3><br>
+            <!--Politics action questions -->
+            <fieldset class="form-group offset-xl-4 offset-lg-2">
+
+                <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0"><strong>Which category best matches your political viewpoint?</strong></legend>
+                <div class="col-sm-10">
+                    {% for dict_item in politics %}
+                        {% for key, value in dict_item.items()%}
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="politics" id={{value}} value='{{value}}'>
+                            <label class="form-check-label" for={{value}}>
+                                {{value}}
+                            </label>
+                        </div>
+
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </fieldset><br>
+
+            <fieldset class="form-group offset-xl-4 offset-lg-2">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0"><strong>Which country do you currently live?</strong></legend>
+
+                    <div class="col-sm-10">
+                    <select class="form-select w-auto" name="country">
+                        <option disabled="" selected="">Country</option>
+                        {% for dict_item in countries %}
+                            {% for key, value in dict_item.items()%}
+
+                            <option value='{{value}}'>{{value}}</option>
+
+                            {% endfor %}
+                        {% endfor %}
+                    </select>
+                    </div>
+                </div>
+            </fieldset><br>
+            <fieldset class="form-group offset-xl-5 offset-lg-2">
+                <button class="btn btn-primary" type="submit">Submit!</button>
+            </fieldset><br>
+        </form>
+
+{% endblock %}

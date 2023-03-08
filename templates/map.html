@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f2fd585bfa0d2ff594518473e6470494 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f2fd585bfa0d2ff594518473e6470494" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f2fd585bfa0d2ff594518473e6470494 = L.map(
+                "map_f2fd585bfa0d2ff594518473e6470494",
+                {
+                    center: [30.0, 10.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 3,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_04e13f1aea9784b185c540a0d9ea1efc = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_f2fd585bfa0d2ff594518473e6470494);
+        
+    
+            var feature_group_a77d0e0f6b7af9c4773a8139b78edc7e = L.featureGroup(
+                {}
+            ).addTo(map_f2fd585bfa0d2ff594518473e6470494);
+        
+    
+            var marker_a3503c0abb4cde9cc8d06aec7278ba59 = L.marker(
+                [28.0, 3.0],
+                {}
+            ).addTo(feature_group_a77d0e0f6b7af9c4773a8139b78edc7e);
+        
+    
+            var icon_aadcf4c91635451171cc975ca325faec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a3503c0abb4cde9cc8d06aec7278ba59.setIcon(icon_aadcf4c91635451171cc975ca325faec);
+        
+    
+        var popup_b47c5f050c10bfb4ef7bce2c9a67e382 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var html_115c19dfa21772d8e1e4911b057e5d39 = $(`<div id="html_115c19dfa21772d8e1e4911b057e5d39" style="width: 100.0%; height: 100.0%;">             <h2> Survey Data</h2><br>              <strong>Name: </strong> Algeria<br>             <strong>Gender: </strong> Male: 2, <br>             <strong>Age: </strong> 18-25: 1, over 55: 1, <br>             <strong>Education: </strong> Degree: 1, Second level: 1, <br>             <strong>Climate Change Knowledge: </strong> Above average: 1, Expert: 1, <br>             <strong>Information Sources: </strong> Online research: 2, <br>             <p>              </div>`)[0];
+                popup_b47c5f050c10bfb4ef7bce2c9a67e382.setContent(html_115c19dfa21772d8e1e4911b057e5d39);
+            
+        
+
+        marker_a3503c0abb4cde9cc8d06aec7278ba59.bindPopup(popup_b47c5f050c10bfb4ef7bce2c9a67e382)
+        ;
+
+        
+    
+    
+            var marker_9caafa50c2f8a799e5e22b202017bd84 = L.marker(
+                [13.1667, -59.5333],
+                {}
+            ).addTo(feature_group_a77d0e0f6b7af9c4773a8139b78edc7e);
+        
+    
+            var icon_b71b8aee88fc6dadfbaf946e1dcce47e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9caafa50c2f8a799e5e22b202017bd84.setIcon(icon_b71b8aee88fc6dadfbaf946e1dcce47e);
+        
+    
+        var popup_e0879232b2346ed94e42e71028f7e1f0 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var html_7347b4c185788998689237aac6825082 = $(`<div id="html_7347b4c185788998689237aac6825082" style="width: 100.0%; height: 100.0%;">             <h2> Survey Data</h2><br>              <strong>Name: </strong> Barbados<br>             <strong>Gender: </strong> Male: 2, <br>             <strong>Age: </strong> 18-25: 2, <br>             <strong>Education: </strong> Degree: 2, <br>             <strong>Climate Change Knowledge: </strong> Average: 2, <br>             <strong>Information Sources: </strong> Education system: 2, <br>             <p>              </div>`)[0];
+                popup_e0879232b2346ed94e42e71028f7e1f0.setContent(html_7347b4c185788998689237aac6825082);
+            
+        
+
+        marker_9caafa50c2f8a799e5e22b202017bd84.bindPopup(popup_e0879232b2346ed94e42e71028f7e1f0)
+        ;
+
+        
+    
+    
+            var marker_a73ec4c78ee39b0406effb62603b753b = L.marker(
+                [4.5, 114.6667],
+                {}
+            ).addTo(feature_group_a77d0e0f6b7af9c4773a8139b78edc7e);
+        
+    
+            var icon_49fd8eb88e6deb9ca8c7e1c70dcc8f87 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a73ec4c78ee39b0406effb62603b753b.setIcon(icon_49fd8eb88e6deb9ca8c7e1c70dcc8f87);
+        
+    
+        var popup_dfb13c640e853831a9ce730d8556aa19 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var html_bb8b26bb4d256cfe1b94e541649c361b = $(`<div id="html_bb8b26bb4d256cfe1b94e541649c361b" style="width: 100.0%; height: 100.0%;">             <h2> Survey Data</h2><br>              <strong>Name: </strong> Brunei<br>             <strong>Gender: </strong> Male: 1, <br>             <strong>Age: </strong> 35-55: 1, <br>             <strong>Education: </strong> Doctorate: 1, <br>             <strong>Climate Change Knowledge: </strong> Expert: 1, <br>             <strong>Information Sources: </strong> Education system: 1, <br>             <p>              </div>`)[0];
+                popup_dfb13c640e853831a9ce730d8556aa19.setContent(html_bb8b26bb4d256cfe1b94e541649c361b);
+            
+        
+
+        marker_a73ec4c78ee39b0406effb62603b753b.bindPopup(popup_dfb13c640e853831a9ce730d8556aa19)
+        ;
+
+        
+    
+    
+            var marker_96c82465b02e794f4d3ba8668eec9a20 = L.marker(
+                [53.0, -8.0],
+                {}
+            ).addTo(feature_group_a77d0e0f6b7af9c4773a8139b78edc7e);
+        
+    
+            var icon_debf386f192fb033b3ccc903a3ef58b0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_96c82465b02e794f4d3ba8668eec9a20.setIcon(icon_debf386f192fb033b3ccc903a3ef58b0);
+        
+    
+        var popup_b5262c3c5e3ea1e8a75faa3634b91895 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var html_ee190b8f8183f0258b0fc7560f9c2dbe = $(`<div id="html_ee190b8f8183f0258b0fc7560f9c2dbe" style="width: 100.0%; height: 100.0%;">             <h2> Survey Data</h2><br>              <strong>Name: </strong> Ireland<br>             <strong>Gender: </strong> Female: 2, Male: 1, <br>             <strong>Age: </strong> 18-25: 1, 35-55: 2, <br>             <strong>Education: </strong> Doctorate: 1, Masters: 1, Second level: 1, <br>             <strong>Climate Change Knowledge: </strong> Average: 2, Expert: 1, <br>             <strong>Information Sources: </strong> Education system: 1, Online news media: 1, Social media networks: 1, <br>             <p>              </div>`)[0];
+                popup_b5262c3c5e3ea1e8a75faa3634b91895.setContent(html_ee190b8f8183f0258b0fc7560f9c2dbe);
+            
+        
+
+        marker_96c82465b02e794f4d3ba8668eec9a20.bindPopup(popup_b5262c3c5e3ea1e8a75faa3634b91895)
+        ;
+
+        
+    
+    
+            var marker_f7178ca2b46ec9c03ae3003ec24c4a18 = L.marker(
+                [54.0, -2.0],
+                {}
+            ).addTo(feature_group_a77d0e0f6b7af9c4773a8139b78edc7e);
+        
+    
+            var icon_d2e6810c793f62825717ef761023aa85 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f7178ca2b46ec9c03ae3003ec24c4a18.setIcon(icon_d2e6810c793f62825717ef761023aa85);
+        
+    
+        var popup_b28f63ca48cfb9cfcac6c5a31b07aeb3 = L.popup({"maxWidth": 2650});
+
+        
+            
+                var html_edabb45aa6d53e98668472b13e804fb2 = $(`<div id="html_edabb45aa6d53e98668472b13e804fb2" style="width: 100.0%; height: 100.0%;">             <h2> Survey Data</h2><br>              <strong>Name: </strong> United Kingdom<br>             <strong>Gender: </strong> Male: 1, <br>             <strong>Age: </strong> 35-55: 1, <br>             <strong>Education: </strong> Doctorate: 1, <br>             <strong>Climate Change Knowledge: </strong> Above average: 1, <br>             <strong>Information Sources: </strong> Online research: 1, <br>             <p>              </div>`)[0];
+                popup_b28f63ca48cfb9cfcac6c5a31b07aeb3.setContent(html_edabb45aa6d53e98668472b13e804fb2);
+            
+        
+
+        marker_f7178ca2b46ec9c03ae3003ec24c4a18.bindPopup(popup_b28f63ca48cfb9cfcac6c5a31b07aeb3)
+        ;
+
+        
+    
+</script>
+</html>

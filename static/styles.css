@@ -1,0 +1,64 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .black
+{
+    color: #3b444b;
+}
+nav .navbar-brand .cream
+{
+    color: #f0ece1;
+}
+nav .navbar-brand .red
+{
+    color: #dd4e1e;
+}
+nav .navbar-brand .orange
+{
+    color: #e5703d;
+}
+nav .navbar-brand .grey
+{
+    color: #3b444b;
+}
+
+
+/*PORTRAIT IMAGES CLASSES*/
+.portrait{
+
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: black;
+    border: 1px dotted #0000;
+
+  }
+
+.grid-container{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+}
+
+.head{
+
+    color: #e5703d;
+
+}
+
+.carousel img{
+    object-fit: cover;
+    object-position: center;
+    height: 60vh;
+    overflow: hidden;
+}
+
+p {
+    padding-right: 35px;
+  }

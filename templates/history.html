@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-start">Gender</th>
+                    <th class="text-end">Age</th>
+                    <th class="text-end">Education</th>
+                    <th class="text-end">Climate Knowledge</th>
+                    <th class="text-end">Information Source</th>
+                    <th class="text-end">Causation</th>
+                    <th class="text-end">Stress</th>
+                    <th class="text-end">Agency</th>
+                    <th class="text-end">Government Performance</th>
+                    <th class="text-end">Political Outlook</th>
+                    <th class="text-end">Resides In</th>
+                    <th class="text-end">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TODO: Loop through the database entries to display them in this table -->
+                {% for detail in result %}
+                    <tr>
+                        <td class="text-start">{{ detail.gender }}</td>
+                        <td class="text-end">{{ detail.age }}</td>
+                        <td class="text-end">{{ detail.education }}</td>
+                        <td class="text-end">{{ detail.climate_k_rating}}</td>
+                        <td class="text-end">{{ detail.climate_info_source }}</td>
+                        <td class="text-end">{{ detail.climate_causes }}</td>
+                        <td class="text-end">{{ detail.anxiety }}</td>
+                        <td class="text-end">{{detail.personal }}</td>
+                        <td class="text-end">{{ detail.government_action }}</td>
+                        <td class="text-end">{{ detail.politics }}</td>
+                        <td class="text-end">{{ detail.country }}</td>
+                        <td class="text-end">{{ detail.date }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+{% endblock %}

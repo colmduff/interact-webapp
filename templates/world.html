@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    National Emissions
+{% endblock %}
+
+{% block main %}
+
+<section>
+
+    <div class ="row">
+        <div class = "col col-md- col-sm-">
+            <h3 align="Centre"><span class="head">Mean Surface Temperatures Change</span></h3>
+            <div id='temp_chart' class='chart'></div>
+
+        </div>
+        <div class = "col col-md- col-sm-">
+            <h3>Our Planet is heating up!</h3>
+
+            <p align="justify" class = "p">Earth’s temperature has risen by about 0.08° Celsius every 10 years since 1880.
+                Changes to Earth’s climate have resulted in the rapid melt of glaciers and ice sheets,
+                increased drought and threats to water supplies, changes in geographic ranges of plant and animals. It
+                has also meant that plants bloom out of season, which has impacts predictability, reliability and productivity impacts.
+                Earlier blooming means that plants are more vulnerable to cold snaps, and for animal life, hibernation cycles are often linked to plant blooming.
+            </p><br>
+
+            <p align="justify" class = "p">Current global warming is about 1.1°C above preindustrial temperatures, and this may already trigger tipping points, which
+                are points that, once crossed, may lead to a large, irreversible change to the climate system.
+            </p><br>
+
+            <p align="justify" class = "p"><strong>The world is heading toward ~2 to 3°C of global warming</strong>, the time left for action is all but spent, we need to come together like never before.</p>
+
+        </div>
+
+    </div>
+
+    <div class ="row">
+        <div class = "col col-md- col-sm-">
+            <h3 align="Centre"><span class="head">Annual Carbon Dioxide Emissions</span></h3>
+            <div id='carbon_chart' class='chart'></div>
+
+        </div>
+        <div class = "col col-md- col-sm-">
+            <h3>Heat Trapping Greenhouse Gases</h3>
+            <p align="justify" class = "p">Greenhouse Gases, produced by human activity, have increased since the pre-industrial era, driven largely by economic activity.
+                Emissions are higher than ever, and are now higher than ever. The increase in the last few decades has been dramatic, at the start of the indistrual revolution,
+                CO2 levels were around 280 part per million (ppm), as you can see in the graphic (left), levels have increased from 395 ppm in 2013 to almost 420 ppm in 2023.</p><br>
+            <p align="justify" class = "p"> Why should we care? The greenhouse effect. The "Greenhouse gases" that have accompanied our rapid increase in industrial activity
+                act as a blanket around the earth. Ideally, the sun's radiation would hit the earth, some is absorbed and warms it, while the rest is reflected back out. However, as the greenhouse
+                gas blanket thickens, prevents more of the sun's radiation escaping, resulting in more warming.</p>
+        </div>
+
+    </div>
+
+    <div class ="row">
+        <div class = "col col-md- col-sm-">
+            <h3 align="Centre"><span class="head">Average Sea Ice Extent</span></h3>
+            <div id='sea_ice_chart' class='chart'></div>
+
+        </div>
+        <div class = "col col-md- col-sm-">
+            <h3>Ice Melting, Seas Rising</h3>
+            <p align="justify" class = "p">According to <a href="https://climate.nasa.gov/vital-signs/sea-level/">NASA</a>, sea level rise is caused primarily by two factors, both of which are related to global warming.
+                The first is melting of ice sheets and glaciers and the second is the the expansion of seawater as it warms</p><br>
+
+            <p align="justify" class = "p"> According to the <a href="http://www.oceansatlas.org/subtopic/en/c/42/">UN atlas of Oceans</a>, over the last 10 years, sea levels have risen over 30cm.
+            By the end of the century, <strong>oceans may rise up to 108cm</strong>. This spells disaster for the small island nations, who will likely cease to exist. However, this is a problem
+            for a huge proportion of humanity who live in coastal areas. Two of the worst impacted areas would be China and Bangladesh, with an estimated 140 million people impacted in these regions along.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<script type='text/javascript'>
+    var temperature = {{graphJSON | safe}};
+    var carbon = {{graphJSON1 | safe}};
+    var sea_ice = {{graphJSON2 | safe}};
+  </script>
+
+
+{% endblock %}

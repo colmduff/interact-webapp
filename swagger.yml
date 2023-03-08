@@ -1,0 +1,50 @@
+# swagger.yml
+openapi: 3.0.0
+info:
+  title: " Sruvey data Flask REST API"
+  description: "An API for climate priority data"
+  version: "1.0.0"
+
+servers:
+  - url: "/api"
+
+components:
+  schemas:
+    Survey:
+      type: "object"
+      required:
+        - q_id
+      properties:
+        gender:
+          type: "string"
+        age:
+          type: "string"
+        education:
+          type: "string"
+        country:
+          type: "string"
+        climate_k_rating:
+          type: "string"
+        climate_info_source:
+          type: "string"
+        climate_causes:
+          type: "string"
+        anxiety:
+          type: "string"
+        personal:
+          type: "string"
+        listening:
+          type: "string"
+        government_action:
+          type: "string"
+
+paths:
+  /survey_data:
+    get:
+      operationId: "survey_data.read_all"
+      tags:
+        - "Survey"
+      summary: "Read the current survey data"
+      responses:
+        "200":
+          description: "Successfully read current survey data"

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    National Emissions
+{% endblock %}
+
+{% block main %}
+    <section>
+        <h3 align="left">{{ gas_selection }} Emissions for {{country_name}} in {{ unit }}</h3>
+        <div id='national_chart' class='chart'></div>
+
+
+    </section>
+        <script type='text/javascript'>
+            var national = {{graphJSON3 | safe}};
+        </script>
+
+{% endblock %}
+
