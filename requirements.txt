@@ -2,13 +2,10 @@ cs50
 Flask
 Flask-Session
 requests
-functools
-urllib.parse
-tempfile
-werkzeug.security
 datetime
 unfccc_di_api
 numpy
 pandas
 folium
-re
+connexion
+plotly
